@@ -1,0 +1,18 @@
+
+
+ assignment 1 - first.php ,displayfirst.php
+ assignment 2 - second.php ,displaysecond.php
+ assignment 3 - third.php ,displaythird.php
+ assignment 4 - four.php ,displayfour.php
+ assignment 5 - fifth.php ,displayfifth.php
+ assignment 6 - six.php ,displaysix.php
+
+
+assignment 7  [q-question , p-  corresponding backend scripting php]
+
+assignment 7 -  q1.php,p1.php
+                q2.php,p2.php
+                q3.php,p3.php
+                q4.php,p4.php
+                q5.php,p5.php
+                q6.php,p6.php

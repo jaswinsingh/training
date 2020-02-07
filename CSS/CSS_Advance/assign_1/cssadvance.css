@@ -1,0 +1,172 @@
+body{
+  padding: 0;
+  margin: 0;
+}
+
+.header
+{
+    background-color: #dddddd;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #c9cdd1;
+    height: 90px;
+    align-items: center;
+}
+
+.navigation{
+position: relative;
+left: 320px;
+}
+
+#logo{
+position: relative;
+right:  310px;
+width: 100px;
+height: 50px;
+}
+
+ul{
+  list-style-type: none;
+}
+
+ #upper li{
+  float: right;
+}
+
+ a{
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+  color: blue;
+  margin: 5px;
+}
+
+a:hover{
+ background-color: red;
+}
+
+ a:focus{
+   background-color: black;
+   color: green;
+}
+
+.banner{
+    background-color: #33adff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+}
+
+.larrow{
+position: relative;
+right:  410px;
+
+}
+.rarrow{
+  position: relative;
+  left:  400px;
+}
+
+#left{
+  width: 50px;
+  height: 50px;
+}
+
+#right{
+  width: 50px;
+  height: 50px;
+}
+
+#bannerText{
+  color: white;
+  font-size: 3em;
+}
+
+.content{
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.content>div{
+  width: 560px;
+  height: 300px;
+}
+
+.feed{
+width: 550px;
+  background-color: #ffff66;
+  height: 300px;
+  margin-right: 15px;
+}
+
+.float{
+  position: relative;
+  top: 20px;
+  right: 30px;
+  height: 290px;
+  width: 50%;
+  background-color: #dab3ff;
+  height: 200px;
+}
+
+.content>div{
+  width: 560px;
+height: 300px;
+}
+
+.form{
+  background-color:#f2800d;
+  width: 545px;
+  height: 200px;
+
+}
+
+input{
+  display: block;
+  background-color:#ff9900;
+  padding: 5px;
+  border: 1px solid orange;
+  position: relative;
+  top: 15px;
+  left: 15px;
+  margin-bottom: 15px;
+}
+
+input[type=submit]{
+  padding: 10px;
+  margin-top: 10px;
+  color: white;
+}
+
+.extra{
+  margin-top: 10px;
+background-color:#80ff80;
+width: 545px;
+height: 90px;
+
+}
+
+.footer{
+   background-color: #006699;
+   text-align: center;
+   height: 70px;
+}
+
+#lower li{
+  display: inline;
+  color: white;
+}
+
+#lower a
+{
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px;
+    color: white;
+    margin-right: 5px;
+    margin-top: 15px;
+}

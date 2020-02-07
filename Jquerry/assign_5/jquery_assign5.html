@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="assign2.css">
+    <title></title>
+
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+    <script>
+      $(document).ready(function(){
+        $('.foot').click(function(){
+          $(".pop").css("display","block" );
+        });
+        $('.close').click(function(){
+          $(".pop").css("display","none" );
+        });
+      });
+    </script>
+
+<style media="screen">
+*{
+    font-family:  sans-serif;
+}
+.header
+{
+margin: 10px;
+padding: 10px;
+background-color: lightblue;
+text-align: center;
+color: white;
+}
+
+.sidebar{
+  text-align:center;
+  background-color: lightgreen;
+  float: left;
+  width: 180px;
+  height: 300px;
+  margin-right: 10px;
+  color: white;
+  display: table-cell;
+}
+.mainContent{
+  background-color: yellow;
+  overflow: auto;
+  height: 180px;
+  margin-right: 20px;
+  text-align: center;
+  color: white;
+}
+
+.extraContent{
+margin-top: 10px;
+margin-right: 20px;
+text-align: center;
+color: white;
+background-color: grey;
+overflow: auto;
+height: 110px;
+}
+
+.content {
+  margin: 10px;
+  width: 100%;
+}
+.foot{
+  background-color: orange;
+  color: white;
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+}
+.pop{
+  width:100%;
+  height:100%;
+  position:fixed;
+  top:0px;
+  background-color: rgba(0, 0,0, 0.9);
+  color: white;
+  display: none;
+}
+  .msg{
+padding-top: 150px;
+font-size: 5em;
+text-align:center;
+  }
+  .close{
+float:right ;
+position: relative;
+right: 70px;
+top: 20px;
+font-size: 2em;
+  }
+</style>
+  </head>
+  <body>
+<div class="header">
+  <h2>Header</h2>
+</div>
+
+<div class="content">
+<div class="sidebar">
+<h2>sidebar</h2>
+</div>
+
+
+  <div class="mainContent">
+    <h2>Main Content</h2>
+  </div>
+
+  <div class="extraContent">
+    <h2>Extra Content</h2>
+  </div>
+
+</div>
+
+
+<div class="foot">
+  <h2>Footer</h2>
+</div>
+
+<div class="pop">
+  <div class="close">
+  X
+  </div>
+  <div class="msg">
+    <p>I am popup</p>
+  </div>
+
+</div>
+
+  </body>
+</html>

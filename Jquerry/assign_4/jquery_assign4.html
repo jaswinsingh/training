@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <style media="screen">
+
+.header
+{
+margin: 10px;
+padding: 10px;
+background-color: lightblue;
+text-align: center;
+color: white;
+}
+
+.sidebar{
+  text-align:center;
+  background-color: lightgreen;
+  float: left;
+  width: 180px;
+  height: 300px;
+  margin-right: 10px;
+  color: white;
+  display: table-cell;
+}
+.mainContent{
+  background-color: yellow;
+  overflow: auto;
+  height: 180px;
+  margin-right: 20px;
+  text-align: center;
+  color: white;
+}
+
+.extraContent{
+margin-top: 10px;
+margin-right: 20px;
+text-align: center;
+color: white;
+background-color: grey;
+overflow: auto;
+height: 110px;
+}
+
+.content {
+  margin-top: 10px;
+    margin-left: 10px;
+
+  width: 100%;
+}
+.foot{
+  background-color: orange;
+  color: white;
+  margin-top:10px;
+  text-align: center;
+  margin-right:10px;
+  float:right;
+  width:99%;
+
+
+}
+    </style>
+
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+    <script>
+      $(document).ready(function(){
+        $('.header').click(function(){
+          $(this).css("backgroundColor","orange");
+        });
+        $('.sidebar').click(function(){
+          $(this).html("<h2>Leftbar<h2>");
+        });
+        $('.extraContent').click(function(){
+          $(".mainContent").fadeOut(1000);
+        });
+      });
+    </script>
+
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="assign2.css">
+    <title></title>
+  </head>
+  <body>
+
+<div class="header">
+  <h2>Header</h2>
+</div>
+
+<div class="content">
+<div class="sidebar">
+  <h2>sidebar</h2>
+</div>
+
+
+  <div class="mainContent">
+    <h2>Main Content</h2>
+  </div>
+
+  <div class="extraContent">
+    <h2>Extra Content</h2>
+  </div>
+</div>
+
+  <div class="foot">
+    <h2>Footer</h2>
+  </div>
+
+
+  </body>
+</html>

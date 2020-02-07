@@ -1,0 +1,532 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.header{
+width: 100%;
+float: left;
+background-color:#ffffe6;
+}
+.headcontainer{
+  width: 1100px;
+  margin: 0 auto;
+}
+#head_logo{
+  width: 100%;
+  height: 100%;
+}
+.logo{
+  width: 140px;
+  height: 60px;
+  display: inline-block;
+}
+.navigation{
+  float: right;
+  margin-right: 40px;
+}
+#nav a{
+  text-decoration: none;
+  padding: 24px 20px;
+  display:block;
+  font-size: 0.8em;
+}
+#nav li{
+  list-style-type: none;
+  float: left;
+}
+.mailbox{
+  float: right;
+  width: 40px;
+  height: 40px;
+  margin: 10px 0;
+}
+#mail{
+  width: 100%;
+  height: 100%;
+}
+a:hover{
+  background: #f2f2f2;
+}
+.dropdown{
+float: left;
+}
+.dropbtn{
+  outline: none;
+  border: 0;
+background-color: inherit;
+    font-size: inherit;}
+
+.dropdown-content{
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  z-index:1 ;
+}
+.dropdown:hover .dropdown-content{
+  display: block;
+}
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+.banner{
+  background-image: url(images/img-1.jpg);
+  width: 100%;
+  height: 90vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  float: left;
+}
+.coverimage{
+  background-color: rgba(0,0,40,0.7);
+  width: inherit;
+  height: inherit;
+  position: absolute;
+}
+
+.content{
+  width: 800px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.contactus,.discover{
+  border-radius: 30px;
+  padding: 15px 40px;
+  color: white;
+  outline: none;
+  margin-top: 30px;
+}
+.contactus{
+  background-color: #ffcc00;
+  border: solid 1px #ffcc00;
+  margin-right: 20px;
+}
+.discover{
+  background-color: rgba(0,0,0,0.1);
+  border: solid 2px white;
+  margin-left: 20px;
+}
+#downScroll{
+  width: 100%;
+  height: 100%;
+}
+.downscroll{
+  /* width: 20px;
+  height: 10px;
+  margin: 0 auto; */
+  height: 10px;
+   left: 50%;
+   position: absolute;
+   top: 90%;
+   width: 20px;
+
+}
+
+.intro{
+  width: 100%;
+  float: left;
+}
+.information{
+margin: 80px 0;
+float: left;
+}
+
+#Wallet,#Trophy,#Diamond{
+  width: 50px;
+  height: 50px;
+}
+.item li{
+  list-style-type: none;
+  position: relative;
+}
+h5{
+  position: absolute;
+  top: 28px;
+  left: 90px;
+  float:right;
+font-size: 15px;
+}
+
+#sideImage{
+  width: 100%;
+  height: 100%;
+}
+.sideimage{
+width: 50%;
+height: 400px;
+float: right;}
+
+.about{
+width: 50%;
+float: left;
+}
+
+.service{
+  background-image: url(images/img-2.jpg);
+  width: 100%;
+  height: 90vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  float: left;
+  position: relative;
+  float: left;
+}
+.serviceheading{
+  color: white;
+  font-size: 2em;
+  width:450px;
+  margin: 0 auto;
+  padding: 50px 0;
+  text-align: center;
+}
+.servicecontent{
+  width: 100%;
+  margin: 40px 0;
+  float: left;
+}
+.image{
+  width: 100%;
+  height: 50px;
+  display: block;
+  padding: 20px 0px;
+ }
+
+.digitalMarketing,.webdevelopment,.design{
+  color: white;
+  width: 33.3%;
+  float:left;
+}
+h6{
+  width: 100%;
+  text-align: center;
+  padding: 14px 0;
+}
+p{
+  align-items:center;
+}
+#servicebutton{
+  background-color: #ffcc00;
+  border: solid 1px #ffcc00;
+  border-radius: 30px;
+  padding: 15px 0;
+  width: 215px;
+  color: white;
+  outline: none;
+  margin: 50px 0;
+}
+.serviceButton{
+  width: 250px;
+  margin: 0 auto;
+}
+.stats{
+  width: 100%;
+  height: 50vh;
+  background-image: url(images/img-4.jpg);
+  background-position:center;
+  background-repeat: no-repeat;
+ background-size:  cover;   /*1450px 650px; */
+  float: left;
+}
+.statscontent{
+  padding: 30px 0;
+}
+.statsbackground{
+  width: inherit;
+  height: inherit;
+  background-color:rgba(0,0,40,0.7);
+}
+.statsimage{
+  width: 50px;
+  height: 150px;
+  display: block;
+  margin: 0 auto;
+}
+.statsheading{
+  display: block;
+  color: white;
+  font-size: 1em;
+  font-weight:500;
+  line-height: 35px;
+  text-align: center;
+}
+.statscount{
+  display: block;
+  color: white;
+  font-size: 2em;
+  font-weight:600;
+  text-align: center;
+}
+.uniquecustomer {
+    width: 25%;
+    display: inline-block;
+    float: left;
+}
+.hover:hover{
+  color: yellow;
+}
+.package{
+  float: left;
+  width: 100%;
+  height: 90vh;
+  }
+.mainheading{
+  width: 450px;
+  margin: 20px auto;
+}
+.subheading{
+  margin: 20px auto;
+  width: 350px;
+}
+
+.pricebox{
+  width: 100%;
+  text-align: center;
+}
+.pricetag{
+  width: 30%;
+  border: 1px solid grey;
+  display: inline-block;
+  /* margin:0 20px; */
+  box-shadow: 5px 5px 20px grey,-5px 5px 20px grey;
+
+}
+  .pricecontent{
+text-align: center;
+margin: 30px 0;
+}
+.purchase{
+  border-color:blue;color:blue; margin-top: 50px; background-color:white;
+  font-weight: 600;
+}
+.purchase:hover{
+  background-color: #ffcc00;
+  border: solid 2px #ffcc00;
+  color: white;
+  transition: 0.4s;
+}
+
+.informationbackground{
+  background-image: url(images/img-3.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 90vh;
+  float: left;
+}
+.informationbanner{
+      margin: 60px 0 26px 0;
+}
+.informationheading{
+  display: inline-block;
+}
+.scroll{
+  margin: 0;
+  width: 15px;
+  height: 20px;
+
+  padding: 20px 20px;
+  background-color:#220066;
+}
+.LRbutton{
+  display: inline-block;
+  float: right;
+}
+.scroll:hover{
+  background-color: #ffcc00;
+  transition: 0.5s;
+}
+.informationsub{
+  margin-top: 20px;
+}
+.informationcontent{
+  margin-top: 100px;
+  width: 100%;
+  float: left;
+  line-height: 25px;
+}
+.informationcard1{
+  width: 49%;
+  text-align: center;
+  display: inline-block;
+  float: left;
+}
+.informationcard2{
+  width: 49%;
+  text-align: center;
+  display: inline-block;
+  float: right;
+}
+.informationimage{
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+}
+
+.blog{
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+  float: left;
+}
+.blogheading{
+  margin-top: 30px;
+  line-height: 40px;
+}
+.blogcontent{
+  text-align: center;
+}
+.blogcard{
+  width: 30%;
+  text-align: center;
+  margin-top: 20px;
+  box-shadow: 10px 10px 20px grey;
+  border-radius: 10px;
+  display: inline-block;
+}
+.blogcard1{
+  float: left;
+}
+.blogcard3{
+  float: right;
+}
+.blogimage{
+  width: 328px;
+  height: 200px;
+  display: inline-block;
+  border-radius: 10px 10px 0 0;
+}
+.Clinks{
+  width: 100%;
+  height: 60vh;
+  background-color: #220066;
+  float: left;
+}
+#bottomlogo{
+  width: 100%;
+  height: 100%;
+}
+.bottomlogo{
+  width: 150px;
+  height: 70px;
+}
+.linkcontent{
+  width: 75%;
+  float: left;
+}
+.comapany{
+  display: inline-block;
+  width: 32%;
+}
+.linklist {
+  margin-top: 20px;
+}
+.linklist li{
+  list-style-type: none;
+}
+.linklist a{
+  text-decoration: none;
+  color: white;
+  font-size: 0.7em;
+  font-weight: 200;
+}
+.newsletter{
+  float: right;
+  display: inline-block;
+  width: 25%;
+}
+.newsletteremail{
+  border-radius: 30px  0  0 30px;
+  padding: 10px 20px;
+  outline: none;
+  width: 150px;
+  display: inline-block;
+  float: left;
+  margin-top:10px;
+}
+.sendbutton{
+  height: 20px;
+  width: 20px;
+  padding: 10px 15px;
+  display: inline-block;
+  background-color: #ffcc00;
+  border-radius: 0 30px 30px 0;
+  margin-top:10px;
+}
+.sendButton{
+  height: 100%;
+  width: 100%;
+}
+.links{
+  margin: 60px 0;
+}
+.gallery{
+  float: left;
+  width: 100%;
+}
+.galleryheading{
+  margin: 40px 0;
+}
+
+.gallerynav{
+  float: left;
+}
+.gallernavbar li{
+list-style-type: none;
+float:left;
+}
+.gallernavbar a{
+  text-decoration: none;
+  display: block;
+  padding: 10px 20px;
+}
+
+.galleryimage{
+display: flex;
+flex-direction: row;
+float: left;
+margin: 40px 0;
+width:inherit;
+justify-content: center;
+}
+#img1,#img2,#img3,#img4,#img5,#img6,#img7{
+  width:100%;
+  height: 100%;
+}
+.col1img1,.col3img1 {
+  height: 420px;
+  width: 350px;}
+
+
+.col1img2,.col3img2{
+  height: 200px;
+  width: 350px;
+}
+.col2img1,.col2img2,.col2img3{
+  height: 200px;
+  width: 350px;
+}
+.col2{
+  margin: 0 20px;
+}
+.col2img2{
+  margin: 20px 0;
+}
+.col3img1{
+  margin-top: 20px;
+}
+.col1img1{
+  margin-bottom: 20px;
+}

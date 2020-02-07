@@ -1,0 +1,58 @@
+body{
+  background: red;
+  color: white;
+  margin: 0;
+}
+p{
+  text-align: left;
+}
+
+.head{
+margin: 8% 5%;
+}
+
+
+.col1,.col2,.col3{
+
+}
+
+.minor{
+  display: flex;
+  width: 100%;
+  font-size: 11px;
+  position: absolute;
+  bottom: 0px;
+
+}
+
+.col1{
+  float: left;
+  width: 32.3%;
+background: brown;
+margin-right: 5px;
+padding-top: 50px;
+padding-bottom: 50px;
+padding-left: 35px;
+}
+
+.col2{
+  float: left;
+  overflow: auto;
+  width: 32.3%;
+  background: brown;
+margin-right: 5px;
+padding-top: 50px;
+padding-bottom: 50px;
+padding-left: 55px;
+
+}
+
+.col3{
+overflow: auto;
+float: left;
+  width: 32.3%;
+  background: brown;
+padding-top: 50px;
+padding-bottom: 50px;
+padding-left: 55px;
+}

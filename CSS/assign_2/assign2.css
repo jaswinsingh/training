@@ -1,0 +1,51 @@
+
+.header
+{
+margin: 10px;
+padding: 10px;
+background-color: lightblue;
+text-align: center;
+color: white;
+}
+
+.sidebar{
+  text-align:center;
+  background-color: lightgreen;
+  float: left;
+  width: 180px;
+  height: 300px;
+  margin-right: 10px;
+  color: white;
+  display: table-cell;
+}
+.mainContent{
+  background-color: yellow;
+  overflow: auto;
+  height: 180px;
+  margin-right: 20px;
+  text-align: center;
+  color: white;
+}
+
+.extraContent{
+margin-top: 10px;
+margin-right: 20px;
+text-align: center;
+color: white;
+background-color: grey;
+overflow: auto;
+height: 110px;
+}
+
+.content {
+  margin: 10px;
+  width: 100%;
+}
+.foot{
+  background-color: orange;
+  color: white;
+  text-align: center;
+  
+  margin: 10px;
+  padding: 10px;
+}

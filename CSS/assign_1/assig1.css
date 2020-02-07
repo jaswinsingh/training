@@ -1,0 +1,31 @@
+
+.header{
+  padding : 50px;
+  margin: 20px;
+  background-color: #ff66b3;
+}
+
+.col1{
+  width: 72%;
+  height: 350px;
+  background-color: #ff3399;
+  float: left;
+}
+
+.col2{
+  float: right;
+  background-color:#ff0080;
+  width: 27%;
+  height: 350px;
+}
+
+.row{
+  height:350px;
+  margin: 20px;
+}
+
+.foot{
+  margin: 20px;
+  padding : 50px ;
+  background-color: #800040;
+}

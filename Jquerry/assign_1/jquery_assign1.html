@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <style media="screen">
+        .box{
+          margin:30px;
+          width:100px;
+          height:100px;
+          background-color:red;
+        }
+        #hide{
+          margin-left:40px;
+        }
+        </style>
+
+        <script
+        src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+        <script>
+          $(document).ready(function(){
+            $('#hide').click(function(){
+              $(".box").hide(1000);
+            });
+          });
+        </script>
+
+    <title></title>
+  </head>
+  <body>
+<div class="box">
+</div>
+<p>hide the red box on button click</p>
+<button id="hide">Click me</button>
+  </body>
+</html>

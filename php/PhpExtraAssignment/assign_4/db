@@ -1,0 +1,6 @@
+create table loginuser(userid varchar(25) primary key,password varchar(25),email varchar(50),question varchar(200),answer varchar(200));
+
+
+insert into loginuser (userid,password,email,question,answer)values("Jaswin","Asdf1234","jaswinsingh.436@gmail.com","whats your dog name","Google");
+
+insert into loginuser (userid,password,email,question,answer)values("Amit","123456789","amitkumar@gmail.com","favourate color","red");

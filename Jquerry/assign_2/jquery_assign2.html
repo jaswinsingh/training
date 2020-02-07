@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('#button').click(function(){
+          $(".rollingDiv").slideDown(2000);
+        });
+      });
+    </script>
+
+
+    <style media="screen">
+      .rollingDiv,#button{
+        width:500px;
+        border :solid 1px green;
+        text-align: center;
+        padding:5px;
+        margin-left:200px;
+        background-color:  #ccccb3;
+      }
+
+      .rollingDiv{
+        padding:50px 5px;
+        display:none;
+        background-color:#d9ffb3;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="button">
+      Click to slide down panel
+    </div>
+    <div class="rollingDiv">
+        Hello World!
+    </div>
+  </body>
+</html>
