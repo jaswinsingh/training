@@ -15,6 +15,7 @@ class student {
   }
 }
 
+
 class subject{
   public $Subject,$S_code,$mm;
   function __construct($Subject,$S_code,$mm)
@@ -37,6 +38,7 @@ function setmarks($id)
   }
 }
 
+
 $st=[];
 $sub=[];
 foreach ($student as $key => $value) {
@@ -47,10 +49,6 @@ $obj=new student($value['id'],$value['name'],$value['DoB'],$value['grade'],$x);
 $st[]=$obj;
 
 }
-
-
-
-
 
 
 
@@ -69,6 +67,7 @@ foreach ($subject as $key => $value) {
     // print_r( $obj1);
   }
 }
+
 
 class test{
   function showSubject($var)
@@ -92,25 +91,84 @@ function showMarks($id)
 {
   global $st;
   foreach ($st as $key => $value) {
-    print_r($value);
+    if($value->id==$id)
+      return $value->mark;
+      // code...
+
   }
 }
 
+function pass($id){
+  global $st;
+  $temp=0;$c=0;
+  foreach ($st as $key => $value) {
+    if($value->id==$id)
+    foreach ($value->mark[0] as $k1 => $v1) {
+      $temp+=$v1;
+      $c+=1;
+    }
+  }
+
+return $temp/$c>40?"Pass":"Fail";
 }
 
+
+function table()
+{
+      global $st;
+    ?>
+    <!DOCTYPE html>
+    <html lang="en" dir="ltr">
+      <head>
+        <meta charset="utf-8">
+        <title></title>
+      </head>
+      <body>
+        <table border="1px solid black">
+          <tr>
+            <th>Name</th>
+            <th>DOB</th>
+            <th>Grade</th>
+            <th>Subjects</th>
+            <th>Result</th>
+          </tr>
+
+
+  <?php
+  foreach ($st as $key => $value) {
+          echo "<tr> <td>".$value->name."</td><td>".date('m/d/Y', $value->DoB)."</td><td>".$value->grade."</td><td>";
+          foreach ($value->mark[0] as $k => $v) {
+            echo $k."-".$v." <br><br>";
+          }echo "</td>";
+          echo "<td>".$this->pass($value->id)."</td></tr>";
+    }
+    }
+}?>
+</table>
+</body>
+</html>
+
+<?php
 echo "<pre>";
 // print_r($subject);
 // print_r($marks);
 print_r($st);
-//  print_r($sub);
+ print_r($sub);
 //  print_r($student);
 //
 echo "</pre>";
 
 
+// $test1=new test();
+// $result=$test1->showMarks('st1');
+// print_r($result);
+
+
+// $test1=new test();
+// $avgMarks=$test1->pass('st1');
+// echo $avgMarks;
+
 $test1=new test();
-$test1->showMarks(101);
-
-
+$test1->table();
 
  ?>
