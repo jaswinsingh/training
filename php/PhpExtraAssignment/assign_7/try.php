@@ -32,7 +32,7 @@ class Student_details {
 
  	$ob1->setter('Pranav','M');
 
-		$ob1->setter('Shubhosree','F');
+
 
  	$ob1->setter('kaustab','M');
 
@@ -42,7 +42,7 @@ class Student_details {
  	$ob1->setter('Sakshi','F');
 
 
-
+	$ob1->setter('Shubhosree','F');
 
  	$ob1->setter('Jaswin','M');
 
@@ -62,20 +62,20 @@ class Student_details {
     foreach ($v as $key => $value) {
       if ($value=='F')
 			{
-        if($ob1->details[$k-1][$key]=='F' && $ob1->details[$k+1][$key]=='F')
-         {
-					 // echo "string";
-           // $tempName=$ob1->details[$k]['Name'];
-           // $tempGender=$ob1->details[$k]['Gender'];
-           // $ob1->details[$k]['Name']=$ob1->details[$k+3]['Name'];
-           // $ob1->details[$k]['Gender']= $ob1->details[$k+3]['Gender'];
-           // $ob1->details[$k+3]['Name']=$tempName;
-           // $ob1->details[$k+3]['Gender']=$tempGender;
-
-					 demo($k,$key,$value,$ob1);
-
-        }
-				if(($ob1->details[$k+1][$key]=='F')||($ob1->details[$k-1][$key]=='F'))
+        // if($ob1->details[$k-1][$key]=='F' && $ob1->details[$k+1][$key]=='F')
+        //  {
+				// 	 // echo "string";
+        //    // $tempName=$ob1->details[$k]['Name'];
+        //    // $tempGender=$ob1->details[$k]['Gender'];
+        //    // $ob1->details[$k]['Name']=$ob1->details[$k+3]['Name'];
+        //    // $ob1->details[$k]['Gender']= $ob1->details[$k+3]['Gender'];
+        //    // $ob1->details[$k+3]['Name']=$tempName;
+        //    // $ob1->details[$k+3]['Gender']=$tempGender;
+				//
+				// 	 demo($k,$key,$value,$ob1);
+				//
+        // }
+				if(($ob1->details[$k+1][$key]=='F'))
          {
 
 					// $tempName=$ob1->details[$k]['Name'];
@@ -87,6 +87,10 @@ class Student_details {
 					demo($k,$key,$value,$ob1);
 
         }
+				// if($ob1->details[$k-1][$key]=='F')
+				// {
+				// 	demo($k,$key,$value,$ob1);
+				// }
 			 }
       }
     }
@@ -95,23 +99,31 @@ class Student_details {
 
 function demo($k,$key,$value,&$ob1)
 {
+	$x=count($ob1->details)-1;
 
 	$random_keys=array_rand($ob1->details);
-		echo "<br> upper ".$random_keys."<br>";
+		// echo "<br> random ".$random_keys."<br> original".$k."<br>";
 
 	if($ob1->details[$random_keys][$key]=='F')
-	demo($k,$key,$value,$ob1);
-
-	if(($random_keys>0) && ($ob1->details[$random_keys-1][$key]=='F'))
 	{
-			echo "minus".($random_keys-1);
-			demo($k,$key,$value,$ob1);
-	}
-	if (($random_keys<(count($ob1->details)-1))&&($ob1->details[$random_keys+1][$key]=='F')) {
-		echo "add ".($random_keys+1);
-		demo($k,$key,$value,$ob1);
-	}
+	demo($k,$key,$value,$ob1);
+	return;
+}
+	if(($random_keys!=0)&&($ob1->details[$random_keys-1][$key]=='F'))
+	{
+			// echo "minus".($random_keys-1);
 
+			demo($k,$key,$value,$ob1);
+			return;
+	}
+	if (($random_keys!=$x)&&($ob1->details[$random_keys+1][$key]=='F'))	{
+		// echo "add ".($random_keys+1);
+
+		demo($k,$key,$value,$ob1);
+		return;
+
+	}
+// echo "<br>changed<br>";
 	$tempName=$ob1->details[$k]['Name'];
 	$tempGender=$ob1->details[$k]['Gender'];
 	$ob1->details[$k]['Name']=$ob1->details[$random_keys]['Name'];
@@ -121,14 +133,10 @@ function demo($k,$key,$value,&$ob1)
 
 
 	// echo $ob1->details[$random_keys-1][$key];
-
-
-
-
-
-
 }
 
-
- 	print_r($ob1->details);
+foreach ($ob1->details as $key => $value) {
+	echo $value['Name']."<br>".$value['Gender']."<br><br>";
+}
+ 	// print_r($ob1->details);
  ?>

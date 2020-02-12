@@ -35,17 +35,17 @@ $subject=[
                 [
                   'Subject'=>'Maths',
                   'S_code'=>'M101',
-                  'mm'=>20
+                  'mm'=>33
                 ],
                 [
                   'Subject'=>'English',
                   'S_code'=>'HU101',
-                  'mm'=>15
+                  'mm'=>33
                 ],
                 [
                   'Subject'=>'Hindi',
                   'S_code'=>'HI101',
-                  'mm'=>13
+                  'mm'=>33
                 ]
               ],
 
@@ -53,17 +53,17 @@ $subject=[
                 [
                   'Subject'=>'Maths',
                   'S_code'=>'M201',
-                  'mm'=>25
+                  'mm'=>40
                 ],
                 [
                   'Subject'=>'English',
                   'S_code'=>'HU201',
-                  'mm'=>20
+                  'mm'=>40
                 ],
                 [
                   'Subject'=>'Computer',
                   'S_code'=>'CS201',
-                  'mm'=>20
+                  'mm'=>40
                 ]
               ]
 

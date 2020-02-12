@@ -3,27 +3,27 @@
     $clg_data=[
         [
             'id'=>'id1',
-            'name'=>'clg1'
+            'name'=>'JIS'
         ],
 
        [
             'id'=>'id2',
-            'name'=>'clg2'
+            'name'=>'GNIT'
         ],
 
         [
             'id'=>'id3',
-            'name'=>'clg3'
+            'name'=>'TECHNO'
         ],
 
         [
             'id'=>'id4',
-            'name'=>'clg4'
+            'name'=>'UEM'
         ],
 
         [
             'id'=>'id5',
-            'name'=>'clg5'
+            'name'=>'NIT'
         ]
     ];
     $doc_data=[
@@ -37,7 +37,7 @@
         [
             'name'=>'doc2',
             'type'=>'B',
-            'college'=>'id2',
+            'college'=>'',
             'status'=>1
         ],
 

@@ -1,79 +1,32 @@
 <?php
 
     include 'data.php';
-    class college_details
-    {
-        public $id;
-        public $name;
-        public $details=[];
-        function __construct($id,$name)
-        {
-            $this->id=$id;
-            $this->name=$name;
-            $this->details=[];
-        }
-        function getid() {
-            return $this->id;
-        }
-        function getname() {
-            return $this->name;
-        }
-    }
-    class document_details
-    {
-        public $name;
-        public $type;
-        public $college;
-        public $status;
-        function __construct($name,$type,$college,$sent)
-        {
-            $this->name=$name;
-            $this->type=$type;
-            $this->college=$college;
-            $this->status=$sent;
-        }
-        function getname()
-        {
-            return $this->name;
-        }
-        function gettype()
-        {
-            return $this->type;
-        }
-        function getcollege()
-        {
-            return $this->college;
-        }
-        function getsent()
-        {
-            return $this->sent;
-        }
-    }
+    include 'college_details.php';
+    include 'document_details.php';
+    $clg_object=[];
+    $doc_object=[];
 
-    $clg_dt=[];
-    $doc_dt=[];
     //college objects
     foreach($clg_data as $key => $value)
     {
         $obj=new college_details($value['id'],$value['name']);
-        $clg_dt[] = $obj;
+        $clg_object[] = $obj;
 
     }
+
     //document objects
     foreach($doc_data as $key1 => $value1)
     {
         $obj1=new document_details($value1['name'],$value1['type'],$value1['college'],$value1['status']);
-        $doc_dt[]=$obj1;
-
+        $doc_object[]=$obj1;
         merge($value1['college'],$value1['name'],$value1['type'],$value1['status'],$key1);
     }
 
      function merge($c,$n,$t,$s,$key1)
      {
-        global $clg_dt;
-        foreach($clg_dt as $key => $value)
+        global $clg_object;
+        foreach($clg_object as $key => $value)
         {
-
             if(($c) == ($value->id))
             {
                 $value->details[$key1]['doc-name']=$n;
@@ -98,10 +51,20 @@
             }
         }
 
+foreach ($clg_object as $key => $value) {
+  echo "College Id -".$value->id."<br>College Name -".$value->name."<br><br>";
+  foreach ($value->details as $k => $v) {
+    foreach ($v as $k1 => $v1) {
+      echo $k1." -".$v1."<br>";
+    }echo "<br><br>";
+  }
+}
+
+
         echo "<pre>";
-        // //print_r($clg_dt);
-        // //print_r($doc_dt);
-        print_r($clg_dt);
-        print_r($doc_dt);
+        // print_r($clg_dt);
+        // print_r($doc_dt);
+        print_r($clg_object);
+        // print_r($doc_object);
         echo "</pre>";
         // fun();
