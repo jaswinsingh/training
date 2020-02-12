@@ -1,7 +1,13 @@
 <?php
 
 class player{
-  public playerName;
+  public $playerName;
+  public $runs;
+  function __construct($playername)
+  {
+    $this->playerName=$playername;
+    $this->runs=0;
+  }
 }
 
  ?>
