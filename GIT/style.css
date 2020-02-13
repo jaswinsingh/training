@@ -1,0 +1,12 @@
+h2{
+  text-align: center;
+  color: orange;
+  background-color: black;
+}
+
+p{
+  text-align: justify;
+  font-style: normal;
+  font-size: 20px;
+  font-family: cursive;
+}

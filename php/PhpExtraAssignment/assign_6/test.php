@@ -1,7 +1,12 @@
 <?php
 include 'Data.php';
-include 'match.php';
-include 'player.php';
+// include 'match.php';
+// include 'player.php';
+include 'vendor/autoload.php';
+use match\match;
+use player\player;
+
+
 $player_runs=[];
 $match_dt=[];
 $tournament=[];
@@ -96,12 +101,12 @@ echo "Tournament won by ".$b[0]." <br>" ;
 
 }
 
-// echo highest_scorer();
-// echo max_score();
+echo "Highest scorer in Tournament ".highest_scorer()."<br>";
+echo "Highest runs in scored in Tournament ".max_score();
 echo"<pre>";
-print_r($match_dt);
+// print_r($match_dt);
 // print_r($matches);
-print_r($tournament);
+// print_r($tournament);
 // print_r($player_runs);
 echo"</pre>";
  ?>
