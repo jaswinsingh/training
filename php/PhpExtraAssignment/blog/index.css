@@ -31,8 +31,12 @@
   width: 100%;
 }
 
-.content{
-  width: 300px;
-  margin: 10px auto;
-
+.blogTable{
+  border-collapse: collapse;
+  width: 500px;
+  margin: 25px auto;
+}
+.blogTable tr,td,th{
+  border: 1px solid black;
+  padding: 15px;
 }

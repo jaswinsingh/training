@@ -45,7 +45,7 @@ class ludoFunction{
          $r=$this->to_win($value[$i]);
          if ($r == 5){
            $this->reset_score();
-           echo $currentPlayer." Won The Game#".$key." In ".($i+1)." Turns<br>";
+           echo $currentPlayer." Won The Game#".($key+1)." In ".($i+1)." Turns<br>";
            $player[$currentPlayer]+=1;
            $currentPlayer="yogita";
            break;
@@ -68,7 +68,7 @@ class ludoFunction{
                       $w=$this->check_winner($value->token_pos);
                       if($w == 5)
                         return 5;
-                      return 1;
+                      return 0;
                     }
                     else {
                       $value->token_pos[$k1] = $v1-$x;
