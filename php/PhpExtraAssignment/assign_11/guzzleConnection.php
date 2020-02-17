@@ -32,10 +32,17 @@ $res = $client->request('GET', 'http://learning.architbohra.com/ludo_json.php', 
 $j=json_decode($res->getBody(),true);
 
 $ob=new ludoFunction();
+foreach ($score as $key => $value) {
+  $ob->dice_values($key, $value);
+}
+echo "<hr><hr>";
 foreach ($j as $key => $value) {
   $ob->dice_values($key, $value);
 }
-echo ("The Probability Of Yogita Winning The Game is ". ($player['yogita']/$key)*100). "%";
+echo ("The Probability Of Yogita Winning The Game is ". ($player['yogita']/($key+1))*100). "%";
 
+// echo"<pre>";
+// print_r($player);
+// echo "</pre>";
 
  ?>

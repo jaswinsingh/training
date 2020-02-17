@@ -16,25 +16,34 @@ require_once 'SqlConnection.php';
       </ul>
     </div>
 <div class="blogging">
+  <table class="blogTable">
+    <tr>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Date published</th>
+    </tr>
+
 <?php
 $displayData="select blog_id,blog_title,blog_author,blog_date from blog_data";
 $result=$conn->query($displayData);
 
 while($row = mysqli_fetch_assoc($result))
   {
-    echo "<div class='content blog".$row['blog_id']."'>";
+    // echo "<div class='content blog".$row['blog_id']."'>";
     // echo "<div class = 'title'>";
-    echo $row['blog_title'];
+    echo "<tr>";
+    echo "<td>".$row['blog_title']."</td>";
     // echo "</div>";
-    echo $row['blog_author'];
-    echo $row['blog_date'];
-    echo "</div>";
+    echo "<td>".$row['blog_author']."</td>";
+    echo "<td>".$row['blog_date']."</td>";
+    echo "</tr>";
+    // echo "</div>";
 
   }
 
 
  ?>
-
+  </table>
 </div>
 
   </body>

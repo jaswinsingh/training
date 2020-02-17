@@ -1,9 +1,13 @@
 <?php
+// $servername = "localhost";
+// $username = "root";
+// $password = "Jaswinsingh6326@";
+// $db = "blog";
+
 $servername = "localhost";
-$username = "root";
+$username = "jaswin";
 $password = "Jaswinsingh6326@";
 $db = "blog";
-
 $conn = new mysqli($servername, $username, $password, $db);
 
 if ($conn->connect_error) {
