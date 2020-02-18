@@ -11,7 +11,7 @@ require_once 'SqlConnection.php';
   <body>
     <div class="navbar">
       <ul >
-        <li><a href="#">My Blogs</a> </li>
+        <li><a href="myBlog.php">My Blogs</a> </li>
         <li><a href="#">logout</a> </li>
       </ul>
     </div>
@@ -22,6 +22,8 @@ require_once 'SqlConnection.php';
       <th>Author</th>
       <th>Date published</th>
     </tr>
+
+
 
 <?php
 $displayData="select blog_id,blog_title,blog_author,blog_date from blog_data";
@@ -35,13 +37,19 @@ while($row = mysqli_fetch_assoc($result))
     echo "<td>".$row['blog_title']."</td>";
     // echo "</div>";
     echo "<td>".$row['blog_author']."</td>";
-    echo "<td>".$row['blog_date']."</td>";
+    echo "<td>".date('d/m/Y', $row['blog_date']);
+    echo "<form  action=\"\" method=\"post\">";
+    echo "<input type=\"hidden\" name=\"temp\" value=".$row['blog_id'].">";
+    echo "<input type=\"submit\" name=\"upload\" value=\"Read More\"></form></td>";
     echo "</tr>";
-    // echo "</div>";
 
   }
 
-
+  session_start();  
+  if ((isset($_POST['upload'])) && ($_SERVER["REQUEST_METHOD"]=="POST")){
+          $_SESSION['BID']=$_POST['temp'];
+          header( "Location: displayBlog.php");
+    }
  ?>
   </table>
 </div>

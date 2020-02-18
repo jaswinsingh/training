@@ -1,5 +1,5 @@
  create table User_Login(user_id varchar(100) primary key,password varchar(100) not null,email varchar(50) not null,phone varchar(15),fname varchar(30));
    create table blog_data(blog_id int primary key auto_increment,blog_title varchar(30) not null,blog_author varchar(20) not null,content text not null,blog_date date not null);
 
-   insert into blog_data(blog_title,blog_author,content,blog_date) values("meri zindagi","anthony singh abdula","fhnhmtmmym ykmfmyimdasfdghjhhjghddasadfghj","17/02/2020");
-  insert into blog_data(blog_title,blog_author,content,blog_date) values("baad ki zindagi","shamsher singh","saxcv bbmhjjfgxcjhyhtgdfcx vbnhfgdrsdcx vbvhgyt","2020-07-01");
+   insert into blog_data(blog_title,blog_author,content,blog_date,user_id) values("meri zindagi","Jaswin Singh","fhnhmtmmym ykmfmyimdasfdghjhhjghddasadfghj","2011-07-01","jaswin");
+  insert into blog_data(blog_title,blog_author,content,blog_date,user_id) values("baad ki zindagi","Asit Prakash","saxcv bbmhjjfgxcjhyhtgdfcx vbnhfgdrsdcx vbvhgyt","2020-07-01","asit");
