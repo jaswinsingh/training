@@ -1,5 +1,6 @@
 <?php
 require_once 'SqlConnection.php';
+session_start();
  ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -9,12 +10,12 @@ require_once 'SqlConnection.php';
     <title></title>
   </head>
   <body>
-    <div class="navbar">
-      <ul >
-        <li><a href="myBlog.php">My Blogs</a> </li>
-        <li><a href="#">logout</a> </li>
-      </ul>
-    </div>
+  <?php
+  if (isset($_SESSION['user_id']))
+    require 'navbar.php';
+  else
+    require 'navbar_NL.php';
+  ?>
 <div class="blogging">
   <table class="blogTable">
     <tr>
@@ -45,7 +46,7 @@ while($row = mysqli_fetch_assoc($result))
 
   }
 
-  session_start();  
+
   if ((isset($_POST['upload'])) && ($_SERVER["REQUEST_METHOD"]=="POST")){
           $_SESSION['BID']=$_POST['temp'];
           header( "Location: displayBlog.php");

@@ -28,7 +28,7 @@ if (isset($_POST['submit'])) {
   if(!$error){
     $sqlInsertData="insert into User_Login values('$userName','$password','$email','$phone','$fName')";
     if ($conn->query($sqlInsertData))
-      header("Location:login.html");
+      header("Location:loginHTML.php");
   }
 }
 

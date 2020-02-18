@@ -1,20 +1,25 @@
-<!DOCTYPE html>
+<?php
+require 'sessionCheck.php';
+ ?>
+ <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <link rel="stylesheet" href="index.css">
     <meta charset="utf-8">
     <title></title>
   </head>
   <body>
-<a href="addBlog.php">Add Blog</a>
+
 <?php
-session_start();
+require_once 'navbar.php';
+echo "<a href=\"addBlog.php\">Add Blog</a>";
 require 'SqlConnection.php';
-$userName='Jaswin Singh';
-$userId='jaswin';
-$displayData="select blog_id,blog_title,blog_author,blog_date from blog_data where user_id='".$userId."'";
-$result=$conn->query($displayData);
+// $userName='Jaswin Singh';
+$userId = $_SESSION['user_id'];
+$displayData = "select blog_id,blog_title,blog_author,blog_date from blog_data where user_id='".$userId."'";
+$result = $conn->query($displayData);
 echo "<div class ='content'>";
-while($row = mysqli_fetch_assoc($result))
+while ($row = mysqli_fetch_assoc($result))
   {
     // echo "<div class='content blog".$row['blog_id']."'>";
     echo "<div class = 'title'>";
@@ -33,8 +38,8 @@ while($row = mysqli_fetch_assoc($result))
     echo "</form>";
 
     echo "</div>";
-
   }
+
   echo "</div>";
  ?>
   </body>

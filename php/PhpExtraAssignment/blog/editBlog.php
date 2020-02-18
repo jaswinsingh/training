@@ -1,16 +1,16 @@
 <?php
-session_start();
+require 'sessionCheck.php';
 $id=$_SESSION['BID'];
 require_once 'SqlConnection.php';
 $editQuery="select blog_title,content  from blog_data where blog_id='".$id."'";
-$result=$conn->query($editQuery);
+$result = $conn->query($editQuery);
 $row = mysqli_fetch_assoc($result);
 
 if ((isset($_POST['upload'])) && ($_SERVER["REQUEST_METHOD"]=="POST")){
   $title=$_POST['bTitle'];
   $content=$_POST['bContent'];
 
-  $updateQuery="update blog_data set blog_title='".$title."',content='".$content."',blog_date='".time()."' where blog_id='".$id."'";
+  $updateQuery = "update blog_data set blog_title='".$title."',content='".$content."',blog_date='".time()."' where blog_id='".$id."'";
   if ($conn->query($updateQuery)){
     $editQuery="select blog_title,content  from blog_data where blog_id='".$id."'";
     $result=$conn->query($editQuery);
