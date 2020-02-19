@@ -7,11 +7,10 @@ session_start();
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="index.css?v=2">
+    <link href="https://fonts.googleapis.com/css?family=Mukta+Malar:200,400,700&display=swap" rel="stylesheet">
     <title></title>
   </head>
   <body>
-
-
 
   <?php
   if (isset($_SESSION['user_id']))
@@ -46,7 +45,7 @@ while($row = mysqli_fetch_assoc($result))
     echo "<form  action=\"\" method=\"post\">";
     echo "<input type=\"hidden\" name=\"temp\" value=".$row['blog_id'].">";
     echo "<input type=\"submit\" name=\"upload\" class ='botton' value=\"Read More\"></form>";
-echo "</div>";
+    echo "</div>";
 
   }
 

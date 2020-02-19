@@ -12,18 +12,27 @@ $row = mysqli_fetch_assoc($result);
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="index.css?v=1">
+    <link rel="stylesheet" href="login.css?v=1">
     <title></title>
   </head>
   <body>
-<form class="" action="" method="post" enctype = "multipart/form-data">
-  <label>Blog Title</label>
-  <input type="text" name="bTitle" value="<?php echo$row['blog_title'];?>" required>
-  <label>Upload Image</label>
-  <input type="file" name="Image" value="">
-  <label>Blog content</label>
-  <textarea name="bContent" rows="8" cols="40" value=" "required><?php echo $row['content']; ?></textarea>
+    <?php
+    require_once 'navbar.php';
+     ?>
+  <div class="wrapper">
+  <div class="loginForm">
+<form class="login" action="" method="post" enctype = "multipart/form-data">
+
+  <input type="text" name="bTitle" placeholder="Blog Title" value="<?php echo$row['blog_title'];?>" required>
+
+  <input type="file" name="Image" placeholder="Upload Image" value="">
+
+  <textarea name="bContent" rows="15" cols="40" placeholder="Blog content" value=" "required><?php echo $row['content']; ?></textarea>
   <input type="submit" name="upload" value="Submit">
 </form>
+</div>
+</div>
   </body>
 </html>
 <?php

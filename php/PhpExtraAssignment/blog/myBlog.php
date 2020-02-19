@@ -4,8 +4,9 @@ require 'sessionCheck.php';
  <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.css?v=1">
     <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Mukta+Malar:200,400,700&display=swap" rel="stylesheet">
     <title></title>
   </head>
   <body>

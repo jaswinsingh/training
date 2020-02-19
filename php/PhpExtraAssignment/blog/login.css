@@ -1,8 +1,11 @@
 *{
   padding: 0;
   margin: 0;
+  font-family: 'Mukta Malar', sans-serif;
 }
-
+.login{
+text-align: -webkit-center;
+}
 .loginForm input{
   display: block;
 }

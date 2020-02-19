@@ -1,0 +1,58 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Mukta Malar', sans-serif;
+}
+  .navbar{
+  background-color: black;
+  width: 100%;
+  float: left;
+}
+ .navbar ul{
+   float: right;
+   margin-right: 20px;
+   padding: 20px 0px;
+ }
+.navbar a:hover{
+  background-color: orange;
+  transition: 1s;
+}
+.navbar li{
+  list-style-type: none;
+  float: left;
+  display: block;
+}
+.navbar a{
+  text-decoration: none;
+  color: white;
+  padding: 10px 10px;
+}
+.blog{
+  margin: 0 auto;
+  width: 100%;
+  box-shadow: 30px 30px 58px grey, -30px 30px 58px grey;
+  padding: 20px 30px;
+}
+.dImage{
+width: 400px;
+height: 250px;
+border-radius: 20px;
+}
+
+.bImage{
+  width: 100%;
+text-align: center;
+}
+.bTitle{
+  width: 100%;
+  margin: 20px auto;
+  float: left;
+  text-align: center;
+}
+.title{
+  font-size: 2.5em;
+}
+.bAuther{
+  font-size: 12px;
+  font-weight: 200;
+}

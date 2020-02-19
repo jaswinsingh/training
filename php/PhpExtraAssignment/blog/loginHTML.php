@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="login.css?v=1">
+    <link href="https://fonts.googleapis.com/css?family=Mukta+Malar:200,400,700&display=swap" rel="stylesheet">
     <title></title>
   </head>
   <body>
