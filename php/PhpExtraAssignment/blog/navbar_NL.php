@@ -1,5 +1,7 @@
 <div class="navbar">
-  <ul >
-    <li><a href="loginHTML.php">Login</a> </li>
-  </ul>
+  <div class="container">
+    <ul>
+      <li><a href="loginHTML.php">Login</a> </li>
+    </ul>
+  </div>
 </div>
