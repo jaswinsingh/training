@@ -1,5 +1,6 @@
 <?php
 require_once 'SqlConnection.php';
+
 session_start();
  ?>
 <!DOCTYPE html>
@@ -42,7 +43,7 @@ while($row = mysqli_fetch_assoc($result))
     echo  " ".$row['blog_author'];
     echo "</div>";
     echo "</div>";
-    echo "<form  action=\"\" method=\"post\">";
+    echo "<form class='form' action=\"\" method=\"post\">";
     echo "<input type=\"hidden\" name=\"temp\" value=".$row['blog_id'].">";
     echo "<input type=\"submit\" name=\"upload\" class ='botton' value=\"Read More\"></form>";
     echo "</div>";

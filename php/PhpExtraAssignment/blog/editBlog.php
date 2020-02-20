@@ -51,6 +51,9 @@ if ( isset($_POST['upload']) && isset($_POST['bContent']) && isset($_POST['bTitl
     $file_store = "../../../../upload/".$file_name;
     move_uploaded_file($file_tem_loc,$file_store);
   }
+  else {
+    $file_store="../../../../upload/fixedImage.jpeg";
+  }
 
   $updateQuery = "update blog_data set blog_title='".$title."',content='".$content."',blog_date='".time()."',img='".$file_store."'where blog_id='".$id."'";
   if ($conn->query($updateQuery)){

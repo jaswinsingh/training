@@ -1,5 +1,7 @@
 <?php
 require_once 'SqlConnection.php';
+include 'vendor/autoload.php';
+use blog\user as user;
 $error=false;
 $errorFname="";
 $errorEmail="";
@@ -26,12 +28,15 @@ if (isset($_POST['submit'])) {
     }
   }
   if(!$error){
-    $sqlInsertData="insert into User_Login values('$userName','$password','$email','$phone','$fName')";
+    $Hash=$hasedpassword=hash('sha256',$password);
+
+    $ob = new user($fName,$userName,$Hash,$email,$phone);
+    // print_r($ob);
+    $sqlInsertData="insert into User_Login values('".$ob->getuserName()."','".$ob->getPassword()."','".$ob->getEmail()."','".$ob->getPhoneNo()."','".$ob->getName()."')";
     if ($conn->query($sqlInsertData))
       header("Location:loginHTML.php");
   }
 }
-
 
 
  ?>

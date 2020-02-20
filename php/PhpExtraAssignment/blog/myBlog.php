@@ -1,5 +1,7 @@
 <?php
+ob_start();
 require 'sessionCheck.php';
+
  ?>
  <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -33,12 +35,13 @@ while ($row = mysqli_fetch_assoc($result))
     echo "</div>";
     echo "<div class='bDate'>";
     echo date('d/m/Y', $row['blog_date']);
+    // echo $row['blog_date'];
     echo "</div>";
     echo "<div class='bAuther'>";
     echo  " ".$row['blog_author'];
     echo "</div>";
     echo "</div>";
-    echo "<form  action=\"\" method=\"post\">";
+    echo "<form class='form' action=\"\" method=\"post\">";
      echo "<input type=\"hidden\" name=\"temp\" value=".$row['blog_id'].">";
      echo "<input type=\"submit\" name=\"readme\" class ='botton' value=\"Read More\">";
      echo "<input type=\"submit\" name=\"edit\"class ='botton' value=\"Edit\">";
