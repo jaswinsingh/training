@@ -2,12 +2,13 @@
 <html lang="en" dir="ltr">
   <head>
     <!-- <link rel="stylesheet" href="index.css"> -->
-    <link rel="stylesheet" href="displayBlog.css">
+    <link rel="stylesheet" href="displayBlog.css?v=1">
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css?family=Mukta+Malar:200,400,700&display=swap" rel="stylesheet">
     <title></title>
   </head>
   <body>
+
 
 <?php
   require_once 'SqlConnection.php';
@@ -15,12 +16,15 @@
   if (isset($_SESSION['BID'])){
   $id=$_SESSION['BID'];
 
-  require_once 'navbar.php';
+  if (isset($_SESSION['user_id']))
+    require 'navbar.php';
+  else
+    require 'navbar_NL.php';
 
     $displayQuery="select blog_title,content,img,blog_date,blog_author  from blog_data where blog_id='".$id."'";
     $result=$conn->query($displayQuery);
     $row = mysqli_fetch_assoc($result);
-
+    echo "<div class='container'>";
     echo "<div class='blog'>";
     echo "<div class='bTitle'>";
     echo "<h1 class ='title'>".$row['blog_title']."</h1>";
@@ -44,5 +48,6 @@
   }
  ?>
 
+</div>
 </body>
 </html>
