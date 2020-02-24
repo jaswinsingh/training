@@ -63,5 +63,3 @@ if (isset($_POST['bContent']) && isset($_POST['bTitle']) && $_SERVER["REQUEST_ME
 </div>
   </body>
 </html>
-<?php
- ?>

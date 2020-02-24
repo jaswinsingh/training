@@ -11,10 +11,13 @@ if (isset($_POST['submit'])) {
     $login = new user();
     $conn=$login->openConnection();
     $msg=$login->checkUser($userName,$password,$conn);
-    if (isset($_SESSION['user_id']))
-    echo $_SESSION['user_id'];
-    echo $msg;
-    session_destroy();
+    if ($msg){
+      echo $msg;
+      session_destroy();
+
+    }
+     elseif (isset($_SESSION['user_id']))
+      header("Location:../view/index.php");
 
 
 

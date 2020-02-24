@@ -6,12 +6,15 @@ use model\blog;
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="../view/index.css">
     <title></title>
   </head>
   <body>
 <?php
   $obj = new blog();
- $post = $obj->displayBlog();
+ $post = $obj->displayBlog();?>
+ <div class='content'>
+   <?php
  foreach ($post as $key => $value) { ?>
    <div class='blog'>
     <?php
@@ -39,7 +42,7 @@ use model\blog;
 
 ?>
 
-
+</div>
 
 
   </body>

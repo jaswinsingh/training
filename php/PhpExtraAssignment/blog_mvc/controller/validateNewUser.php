@@ -30,7 +30,9 @@ if (isset($_POST['submit'])) {
   if(!$error){
     $newUser = new user();
     $conn=$newUser->openConnection();
-    echo $newUser->addUser($fullName,$userName,$password,$email,$phone,$conn);
+    if($newUser->addUser($fullName,$userName,$password,$email,$phone,$conn)){
+      header('Location:../view/loginHTML.php');
+    }
 
   }
 

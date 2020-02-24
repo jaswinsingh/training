@@ -5,7 +5,6 @@ use model\connection;
 
 class user extends connection{
   private $errorString;
-
   function checkUser($userName,$password,$conn){
     $loginQuerry='select password,fname from User_Login where user_id ="'.$userName.'"';
     // $conn->query($loginQuerry);
