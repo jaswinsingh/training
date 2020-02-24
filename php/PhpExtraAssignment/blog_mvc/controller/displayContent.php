@@ -1,10 +1,20 @@
+<?php session_start(); ?>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="displayBlog.css?v=1">
+    <link href="https://fonts.googleapis.com/css?family=Mukta+Malar:200,400,700&display=swap" rel="stylesheet">
+    <title></title>
+  </head>
+  <body>
 <?php
-session_start();
+require_once '../controller/navbarSession.php';
 require '../vendor/autoload.php';
 use model\blog;
 $obj = new blog();
-
         // $_SESSION['BID']=$_POST['temp'];
+        // echo $_SESSION['BID'];
         $post=$obj->displayContent($_SESSION['BID']);
         foreach ($post as $key => $value) { ?>
           <div class='container'>
@@ -14,7 +24,10 @@ $obj = new blog();
               </div>
              <?php
              if ($value['img']!=""){ ?>
+               <div class="bImage">
+
                <img class ='dImage' src = "<?php echo $value['img']; ?>" >
+             </div>
              <?php  }?>
               <div class='bContent'>
                 <p><?php echo $value['content']; ?></p>
@@ -28,4 +41,5 @@ $obj = new blog();
     <?php }
 
 
-?>
+?>      </body>
+    </html>

@@ -2,14 +2,7 @@
 require '../vendor/autoload.php';
 use model\blog;
  ?>
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="../view/index.css">
-    <title></title>
-  </head>
-  <body>
+
 <?php
   $obj = new blog();
  $post = $obj->displayBlog();?>
@@ -32,18 +25,12 @@ use model\blog;
         <?php echo $value['blog_author']; ?>
       </div>
     </div>
-    <form class='form' action="../controller/displayContent.php" method="post">
+    <form class='form' action="../controller/action.php" method="post">
     <input type="hidden" name = "temp" value = "<?php echo $value['blog_id']; ?>">
-    <input type="submit" name="upload" class ='botton' value="Read More"></form>
+    <input type="submit" name="readme" class ='botton' value="Read More"></form>
   </div>
 <?php  }
-
-
 
 ?>
 
 </div>
-
-
-  </body>
-</html>

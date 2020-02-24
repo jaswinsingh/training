@@ -18,6 +18,7 @@ class blog extends connection{
 
      $post[] = $row;
     }
+
     return $post;
   }
 
@@ -36,7 +37,8 @@ class blog extends connection{
   function updateBlog($title,$content,$image,$id){
     $ob = new connection();
     $conn = $ob->openConnection();
-    $updateQuery = "update blog_data set blog_title='".$title."',content='".$content."',blog_date='".time()."',img='".$image."'where blog_id='".$id."'";
+    $t=time();
+    $updateQuery = "update blog_data set blog_title='".$title."',content='".$content."',blog_date='".$t."',img='".$image."'where blog_id='".$id."'";
     if ($conn->query($updateQuery)){
       return true;
     }
@@ -56,5 +58,18 @@ class blog extends connection{
       return false;
     }
   }
+
+  function delete($id){
+    $ob = new connection();
+    $conn = $ob->openConnection();
+    $deleteQuery="delete from blog_data where blog_id='".$id."'";
+    if ($conn->query($deleteQuery)){
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
+
 }
  ?>

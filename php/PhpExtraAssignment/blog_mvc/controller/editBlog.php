@@ -1,12 +1,13 @@
 <?php
+// session_start();
+
 require '../vendor/autoload.php';
-session_start();
 use model\blog;
 $post=[];
 $ob= new blog();
 $post=$ob->displayContent($_SESSION['BID']);
 
-require '../view/editBlog.php';
+
 
 if ( isset($_POST['upload']) && isset($_POST['bContent']) && isset($_POST['bTitle'])){
   $title=$_POST['bTitle'];
@@ -25,9 +26,9 @@ if ( isset($_POST['upload']) && isset($_POST['bContent']) && isset($_POST['bTitl
     $file_store="../../../../../upload/fixedImage.jpeg";
   }
 
-if ($ob->updateBlog($title,$content,$file_store,53)){
+if ($ob->updateBlog($title,$content,$file_store,$_SESSION['BID'])){
   echo "Successfully updated";
-  $post=$ob->displayContent(53);?>
+  $post=$ob->displayContent($_SESSION['BID']);?>
   <script type="text/javascript">
   document.getElementById('test1').value = "<?php echo $post[0]['blog_title']; ?>";
   document.getElementById('test2').value = "<?php echo $post[0]['content']; ?>";

@@ -2,7 +2,7 @@
 <?php
 require '../vendor/autoload.php';
 use model\blog;
-require 'sessionCheck.php';
+
  ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -14,7 +14,8 @@ require 'sessionCheck.php';
       <div class='content'>
 <?php
   $obj = new blog();
- $post = $obj->displayBlog($_SESSION['user_id']);
+ $post = $obj->displayBlog($_SESSION['fname']);
+ // echo $_SESSION['user_id'];
 
  foreach ($post as $key => $value) { ?>
    <div class='blog'>

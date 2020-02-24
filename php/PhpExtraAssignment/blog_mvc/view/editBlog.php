@@ -1,4 +1,5 @@
-
+<?php require '../controller/sessionCheck.php'; ?>
+<?php require '../controller/editBlog.php'; ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -9,7 +10,7 @@
   </head>
   <body>
     <?php
-    require_once 'navbar.php';
+    require_once '../controller/navbarSession.php';
      ?>
   <div class="wrapper">
   <div class="loginForm">

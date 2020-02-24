@@ -10,7 +10,7 @@ class connection{
 
   function __construct(){
     $this->serverName = "localhost";
-    $this->userName = "root";
+    $this->userName = "jaswin";
     $this->password = "Jaswinsingh6326@";
     $this->dataBase = "blog";
   }
