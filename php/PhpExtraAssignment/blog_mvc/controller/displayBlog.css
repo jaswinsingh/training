@@ -11,7 +11,7 @@
   background-color: black;
   width: 100%;
   float: left;
-  box-shadow: 0px 1px 10px 0px #666;
+  box-shadow:0px 1px 4px 1px #666;
   position: fixed;
   top:0;
 }
@@ -36,7 +36,7 @@
 }
 .blog{
   margin: 100px auto;
-      box-shadow: 1px 1px 10px 3px grey, -1px -1px 10px grey;
+      box-shadow:  1px 1px 4px 2px grey, -1px -1px 1px grey;
       padding: 40px 30px;
 }
 .dImage{

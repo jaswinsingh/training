@@ -43,7 +43,15 @@ class user extends connection{
     else {
       return 0;
     }
-
   }
+
+  function check($userName){
+    $ob = new connection();
+    $conn = $ob->openConnection();
+    $loginQuerry='select * from User_Login where user_id ="'.$userName.'"';
+    $result  = mysqli_query($conn, $loginQuerry);
+    $rowcount = mysqli_num_rows($result);
+    return $rowcount;
+}
 }
  ?>

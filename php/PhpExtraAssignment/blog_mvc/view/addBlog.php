@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="index.css?v=1">
     <link rel="stylesheet" href="login.css?v=1">
       <link href="https://fonts.googleapis.com/css?family=Mukta+Malar:200,400,700&display=swap" rel="stylesheet">
+      <script src="https://cdn.ckeditor.com/4.13.1/standard-all/ckeditor.js?v=1"></script>
     <title></title>
   </head>
   <body>
@@ -23,6 +24,9 @@
   <textarea name="bContent" rows="15" cols="40" required></textarea>
   <input type="submit" name="upload" value="Submit">
 </form>
+<script type="text/javascript">
+	CKEDITOR.replace('bContent');
+</script>
 </div>
 </div>
   </body>

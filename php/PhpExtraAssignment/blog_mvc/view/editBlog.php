@@ -6,6 +6,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="index.css?v=1">
     <link rel="stylesheet" href="login.css?v=1">
+      <script src="https://cdn.ckeditor.com/4.13.1/standard-all/ckeditor.js?v=1"></script>
     <title></title>
   </head>
   <body>
@@ -23,6 +24,9 @@
   <textarea name="bContent" id='test2' rows="15" cols="40" placeholder="Blog content" value=" "required><?php echo $post[0]['content']; ?></textarea>
   <input type="submit" name="upload" value="Submit">
 </form>
+<script type="text/javascript">
+	CKEDITOR.replace('bContent');
+</script>
 </div>
 </div>
   </body>
