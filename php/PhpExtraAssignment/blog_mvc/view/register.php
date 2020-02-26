@@ -1,5 +1,5 @@
 <?php
-require_once '../controller/validateNewUser.php';
+// require_once '../controller/validateNewUser.php';
 
  ?>
 
@@ -7,9 +7,10 @@ require_once '../controller/validateNewUser.php';
 <html lang="en" dir="ltr">
  <head>
    <meta charset="utf-8">
-   <link rel="stylesheet" href="login.css">
+   <link rel="stylesheet" href="../view/login.css?v=1">
+   <link rel="stylesheet" href="./view/index.css?v=1">
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-   <script src="jquery.js?v=2" charset="utf-8"></script>
+   <script src="../view/jquery.js?v=2" charset="utf-8"></script>
    <title></title>
  </head>
  <body>

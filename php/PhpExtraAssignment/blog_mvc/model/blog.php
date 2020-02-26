@@ -1,6 +1,6 @@
 <?php
 namespace model;
-require '../vendor/autoload.php';
+require './vendor/autoload.php';
 use model\connection;
 
 class blog extends connection{

@@ -1,17 +1,19 @@
-<?php require '../controller/sessionCheck.php'; ?>
-<?php require '../controller/editBlog.php'; ?>
+<?php
+
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="index.css?v=1">
-    <link rel="stylesheet" href="login.css?v=1">
+    <link rel="stylesheet" href="../view/index.css?v=1">
+    <link rel="stylesheet" href="../view/login.css?v=1">
       <script src="https://cdn.ckeditor.com/4.13.1/standard-all/ckeditor.js?v=1"></script>
     <title></title>
   </head>
   <body>
     <?php
-    require_once '../controller/navbarSession.php';
+    require_once 'controller/navbarSession.php';
      ?>
   <div class="wrapper">
   <div class="loginForm">

@@ -1,7 +1,7 @@
 <?php
 // session_start();
-
-require '../vendor/autoload.php';
+require 'controller/sessionCheck.php';
+require 'vendor/autoload.php';
 use model\blog;
 $post=[];
 $ob= new blog();
@@ -34,12 +34,16 @@ if ($ob->updateBlog($title,$content,$file_store,$_SESSION['BID'])){
   document.getElementById('test2').value = "<?php echo $post[0]['content']; ?>";
   </script>
 <?php
-header( "Refresh:1; url='../view/myblog.php'");
+header( "Refresh:1; url='http://www.jaswinsingh.com/internship/php/PhpExtraAssignment/blog_mvc/main.php/myblog'");
   }
 else {
   echo "error while updating";
 }
 
 }
+require 'view/editBlog.php';
+
+
+
 
 ?>

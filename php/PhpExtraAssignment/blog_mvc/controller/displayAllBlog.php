@@ -1,5 +1,7 @@
 <?php
-require '../vendor/autoload.php';
+require './vendor/autoload.php';
+require 'navbarSession.php';
+require 'view/index.php';
 use model\blog;
  ?>
 

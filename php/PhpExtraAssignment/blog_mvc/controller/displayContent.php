@@ -3,14 +3,14 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="displayBlog.css?v=1">
+    <link rel="stylesheet" href="../controller/displayBlog.css?v=1">
     <link href="https://fonts.googleapis.com/css?family=Mukta+Malar:200,400,700&display=swap" rel="stylesheet">
     <title></title>
   </head>
   <body>
 <?php
-require_once '../controller/navbarSession.php';
-require '../vendor/autoload.php';
+require_once 'controller/navbarSession.php';
+require 'vendor/autoload.php';
 use model\blog;
 $obj = new blog();
         // $_SESSION['BID']=$_POST['temp'];

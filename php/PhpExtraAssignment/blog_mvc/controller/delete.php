@@ -1,12 +1,12 @@
 <?php
-require 'sessionCheck.php';
-require '../vendor/autoload.php';
+require 'controller/sessionCheck.php';
+require 'vendor/autoload.php';
 use model\blog;
 $ob= new blog();
 
 if ($ob->delete($_SESSION['BID'])){
   echo "delete succesfully";
-  header( "Refresh:0.5; url='../view/myblog.php'");
+  header( "Refresh:0.5; url='http://www.jaswinsingh.com/internship/php/PhpExtraAssignment/blog_mvc/main.php/myblog'");
 }
 else {
   echo "error";

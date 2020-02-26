@@ -1,6 +1,6 @@
 <?php
 namespace model;
-require '../vendor/autoload.php';
+// include __DIR__."../vendor/autoload.php";
 use model\connection;
 
 class user extends connection{
@@ -21,6 +21,7 @@ class user extends connection{
       if ($t == $row['password']){
         // $errorString = "correct";
         // session_start();
+        
         $_SESSION['user_id']=$userName;
         $_SESSION['fname']=$row['fname'];
         return;

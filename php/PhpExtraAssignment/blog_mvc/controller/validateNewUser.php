@@ -1,6 +1,6 @@
 <?php
 // require_once 'SqlConnection.php';
-require '../vendor/autoload.php';
+require 'vendor/autoload.php';
 use model\user;
 $error = false;
 $errorFname = "";
@@ -31,10 +31,12 @@ if (isset($_POST['submit'])) {
     $newUser = new user();
     $conn=$newUser->openConnection();
     if($newUser->addUser($fullName,$userName,$password,$email,$phone,$conn)){
-      header('Location:../view/loginHTML.php');
+      header('Location:http://www.jaswinsingh.com/internship/php/PhpExtraAssignment/blog_mvc/main.php/login');
     }
 
   }
 
 }
+
+require 'view/register.php';
  ?>

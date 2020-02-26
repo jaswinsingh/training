@@ -1,7 +1,7 @@
 <?php
 // require_once 'SqlConnection.php';
 session_start();
-require '../vendor/autoload.php';
+require 'vendor/autoload.php';
 use model\user;
 if (isset($_POST['submit'])) {
   $userName = $_POST['userName'];
@@ -12,16 +12,14 @@ if (isset($_POST['submit'])) {
     $conn=$login->openConnection();
     $msg=$login->checkUser($userName,$password,$conn);
     if ($msg){
-      echo $msg;
+
       session_destroy();
 
     }
      elseif (isset($_SESSION['user_id']))
-      header("Location:../view/index.php");
-
-
+      header("Location:http://www.jaswinsingh.com/internship/php/PhpExtraAssignment/blog_mvc/main.php/index");
 
   }
 }
-
+require 'view/loginHTML.php';
  ?>
