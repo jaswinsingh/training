@@ -103,6 +103,11 @@ display: inline;
   box-shadow: 1px 1px 3px grey, -1px -1px 3px grey;
   color: white;
 }
+
+.err{
+  color: red;
+}
+
 .form{
   margin-bottom: 20px;
   margin-top: 20px;

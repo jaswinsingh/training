@@ -6,7 +6,7 @@
 
 
 $url = parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH);
-echo $url=basename($url);
+$url=basename($url);
 switch ($url) {
   case 'login':
      include './controller/login.php';
@@ -40,6 +40,9 @@ switch ($url) {
     require 'controller/delete.php';
     break;
 
+  case 'logout':
+    require 'controller/logout.php';
+    break;
   default:
 
     break;

@@ -17,7 +17,7 @@
         <input type="submit" name="submit" value="SUBMIT">
         <div id="formFooter">
             <a class="underlineHover" href="index.php">TEMPORARY LOGIN</a>
-          <a class="underlineHover" href="http://www.jaswinsingh.com/internship/php/PhpExtraAssignment/blog_mvc/main.php/register">REGISTER</a>
+          <a class="underlineHover" href="http://www.localhost/internship/php/PhpExtraAssignment/blog_mvc/main.php/register">REGISTER</a>
         </div>
         <div class="message">
           <?php

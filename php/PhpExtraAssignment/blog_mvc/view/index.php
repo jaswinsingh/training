@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+<?php  session_start();?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -11,12 +11,10 @@
     <?php
     // require '../controller/navbarSession.php';
      ?>
-    <div class="container">
+
       <?php
       // require '../controller/displayAllBlog.php';
        ?>
-    </div>
 
-  </div>
   </body>
 </html>

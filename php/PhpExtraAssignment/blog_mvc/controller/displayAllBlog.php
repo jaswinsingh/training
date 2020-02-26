@@ -1,10 +1,11 @@
 <?php
+session_start();
 require './vendor/autoload.php';
 require 'navbarSession.php';
 require 'view/index.php';
 use model\blog;
  ?>
-
+  <div class="container">
 <?php
   $obj = new blog();
  $post = $obj->displayBlog();?>
