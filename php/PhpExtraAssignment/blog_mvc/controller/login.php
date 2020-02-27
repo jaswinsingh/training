@@ -4,6 +4,25 @@ session_start();
 require 'vendor/autoload.php';
 use model\user;
 if (isset($_POST['submit'])) {
+
+
+  if(isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response']))
+{
+      $secret = '6LdE0NwUAAAAAIjDk5haLxu2098QHussjZWIqFld';
+      $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secret.'&response='.$_POST['g-recaptcha-response']);
+      $responseData = json_decode($verifyResponse);
+      if($responseData->success)
+      {
+          $succMsg = true;
+      }
+      else
+      {
+          $msg = 'Robot verification failed, please try again.';
+      }
+ }
+
+
+
   $userName = $_POST['userName'];
   $password = $_POST['password'];
 
@@ -16,8 +35,8 @@ if (isset($_POST['submit'])) {
       session_destroy();
 
     }
-     elseif (isset($_SESSION['user_id']))
-      header("Location:http://www.localhost/internship/php/PhpExtraAssignment/blog_mvc/main.php/index");
+     elseif (isset($_SESSION['user_id']) && isset($succMsg))
+      header("Location:http://www.jaswinsingh.com/str/index");
 
   }
 }

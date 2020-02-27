@@ -31,7 +31,7 @@ if (isset($_POST['submit'])) {
     $newUser = new user();
     $conn=$newUser->openConnection();
     if($newUser->addUser($fullName,$userName,$password,$email,$phone,$conn)){
-      header('Location:http://www.localhost/internship/php/PhpExtraAssignment/blog_mvc/main.php/login');
+      header('Location:http://www.jaswinsingh.com/str/login');
     }
 
   }

@@ -3,7 +3,7 @@ require 'vendor/autoload.php';
 use model\blog;
 $post=[];
 $ob= new blog();
-session_start();
+
 require 'view/addBlog.php';
 if (isset($_POST['bContent']) && isset($_POST['bTitle']) && $_SERVER["REQUEST_METHOD"]=="POST") {
   $blogtitle=$_POST['bTitle'];
@@ -28,7 +28,7 @@ if (isset($_POST['bContent']) && isset($_POST['bTitle']) && $_SERVER["REQUEST_ME
 
   if ($ob->addBlog($blogtitle,$blogauthor,$content,$userId,$file_store)){
     echo "Blog added successfully";
-    // header("Location:http://www.localhost/internship/php/PhpExtraAssignment/blog_mvc/main.php/myblog");
+    header("Location:http://www.jaswinsingh.com/str/myblog");
   }
 }
 

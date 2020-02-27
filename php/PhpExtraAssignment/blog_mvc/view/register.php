@@ -7,8 +7,8 @@
 <html lang="en" dir="ltr">
  <head>
    <meta charset="utf-8">
-   <link rel="stylesheet" href="../view/login.css?v=5">
-   <link rel="stylesheet" href="../view/index.css?v=2">
+   <link rel="stylesheet" href="/internship/php/PhpExtraAssignment/blog_mvc/view/login.css?v=5">
+   <link rel="stylesheet" href="/internship/php/PhpExtraAssignment/blog_mvc/view/index.css?v=2">
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
    <script src="../view/jquery.js?v=5" charset="utf-8"></script>
    <title></title>

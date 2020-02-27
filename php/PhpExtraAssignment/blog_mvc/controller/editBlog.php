@@ -34,7 +34,7 @@ if ($ob->updateBlog($title,$content,$file_store,$_SESSION['BID'])){
   document.getElementById('test2').value = "<?php echo $post[0]['content']; ?>";
   </script>
 <?php
-// header( "Refresh:1; url='http://www.localhost/internship/php/PhpExtraAssignment/blog_mvc/main.php/myblog'");
+header( "Refresh:1; url='http://www.jaswinsingh.com/str/myblog'");
   }
 else {
   echo "error while updating";

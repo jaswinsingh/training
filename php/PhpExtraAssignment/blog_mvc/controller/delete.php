@@ -6,7 +6,7 @@ $ob= new blog();
 
 if ($ob->delete($_SESSION['BID'])){
   echo "delete succesfully";
-  header( "Refresh:0.5; url='http://www.localhost/internship/php/PhpExtraAssignment/blog_mvc/main.php/myblog'");
+  header( "Refresh:0.5; url='http://www.jaswinsingh.com/str/myblog'");
 }
 else {
   echo "error";
