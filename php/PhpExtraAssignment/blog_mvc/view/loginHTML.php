@@ -25,7 +25,9 @@
           <?php
           // require_once '../controller/login.php';
           if (isset($_POST['submit'])) {
-            echo $msg;}
+            echo $msg.nl2br("\r\n");
+            echo $cap;
+          }
            ?>
         </div>
 

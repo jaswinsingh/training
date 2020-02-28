@@ -3,8 +3,8 @@
 session_start();
 require 'vendor/autoload.php';
 use model\user;
+$cap="";
 if (isset($_POST['submit'])) {
-
 
   if(isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response']))
 {
@@ -17,10 +17,12 @@ if (isset($_POST['submit'])) {
       }
       else
       {
-          $msg = 'Robot verification failed, please try again.';
+          $cap = 'Robot verification failed, please try again.';
       }
  }
-
+ else {
+    $cap = 'Enter captcha value !! ';
+ }
 
 
   $userName = $_POST['userName'];
@@ -30,14 +32,12 @@ if (isset($_POST['submit'])) {
     $login = new user();
     $conn=$login->openConnection();
     $msg=$login->checkUser($userName,$password,$conn);
-    if ($msg){
-
-      session_destroy();
-
-    }
-     elseif (isset($_SESSION['user_id']) && isset($succMsg))
+    // if ($msg){
+    //
+    //
+    // }
+    if (isset($_SESSION['user_id']) && isset($succMsg))
       header("Location:http://www.jaswinsingh.com/str/index");
-
   }
 }
 require 'view/loginHTML.php';

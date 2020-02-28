@@ -127,3 +127,11 @@ input:placeholder {
   margin: 10px 0;
   color: red;
 }
+
+.updateMsg{
+  width: 100%;
+    margin-top: 18px;
+    text-align: center;
+    background-color: #C6FF95;
+    padding: 16px 0px;
+}

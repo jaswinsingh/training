@@ -8,9 +8,9 @@ $user_count=$ob->check($_POST["username"]);
   if($user_count>0) {
       echo "Username Not Available";
   }else{
-      echo "Username Available";
+     echo "Username Available";
   }
-}
+} 
 
 if(isset($_POST["fname"])) {
 if (!preg_match("/^[a-zA-Z]+(\ [a-zA-Z]+)?$/",$_POST["fname"])){

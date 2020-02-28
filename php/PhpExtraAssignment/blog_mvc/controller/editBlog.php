@@ -27,7 +27,7 @@ if ( isset($_POST['upload']) && isset($_POST['bContent']) && isset($_POST['bTitl
   }
 
 if ($ob->updateBlog($title,$content,$file_store,$_SESSION['BID'])){
-  echo "Successfully updated";
+  $msg = "Successfully updated";
   $post=$ob->displayContent($_SESSION['BID']);?>
   <script type="text/javascript">
   document.getElementById('test1').value = "<?php echo $post[0]['blog_title']; ?>";
@@ -37,7 +37,7 @@ if ($ob->updateBlog($title,$content,$file_store,$_SESSION['BID'])){
 header( "Refresh:1; url='http://www.jaswinsingh.com/str/myblog'");
   }
 else {
-  echo "error while updating";
+  $msg ="error while updating";
 }
 
 }
