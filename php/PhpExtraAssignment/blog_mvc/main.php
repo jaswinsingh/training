@@ -43,6 +43,10 @@ switch ($url) {
   case 'logout':
     require 'controller/logout.php';
     break;
+
+    case 'razorpay':
+      require 'view/razorpay.php';
+      break;
   default:
 
     break;

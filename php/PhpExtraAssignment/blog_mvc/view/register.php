@@ -10,7 +10,7 @@
    <link rel="stylesheet" href="/internship/php/PhpExtraAssignment/blog_mvc/view/login.css?v=5">
    <link rel="stylesheet" href="/internship/php/PhpExtraAssignment/blog_mvc/view/index.css?v=2">
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-   <script src="/internship/php/PhpExtraAssignment/blog_mvc/view/jquery.js?v=2" charset="utf-8"></script>
+   <script src="/internship/php/PhpExtraAssignment/blog_mvc/view/jquery.js?v=1" charset="utf-8"></script>
    <title></title>
  </head>
  <body>
@@ -18,9 +18,9 @@
      <div class="loginForm">
        <form class="registerForm" action="" method="post">
        <!-- <label>FULL NAME</label> -->
-       <input type="text" name="fname" value="" required placeholder="FULL NAME"><span class="err" id="error"><?php echo $errorFname ?></span>
+       <input type="text" name="fname" value="" required placeholder="FULL NAME"><span class="err" autocomplete="off" id="error"><?php echo $errorFname ?></span>
        <!-- <label>USERNAME</label> -->
-       <input type="text" id="uname" name="username" value="" required placeholder="USERNAME"><div class="err" id="user-availability-status"></div>
+       <input type="text" id="uname" name="username" value="" required placeholder="USERNAME" autocomplete="off"><div class="err" id="user-availability-status"></div>
        <!-- <label>PASSWORD</label> -->
        <input type="password" name="password" value="" required placeholder="PASSWORD">
        <!-- <label>EMAIL</label> -->

@@ -22,7 +22,7 @@ if (isset($_POST['submit'])) {
     $error = true;
   }
   if (!empty($_POST['phone'])){
-    if (!preg_match("/^\+91[0-9]{10}$/",$_POST['phone'])){
+    if (!preg_match("/^[0-9]{10}$/",$_POST['phone'])){
       $errorPhone = "PHONE-NO ,Wrong format";
       $error = true;
     }

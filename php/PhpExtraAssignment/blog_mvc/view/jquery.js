@@ -24,12 +24,12 @@ data:'fname='+$('input[name$="fname"]').val(),
 type: "POST",
 success:function(data){
 $("#error").text(data);
-$("#reg:input").attr('disabled',true);
+
 },
 error: function()
        {
            // enable button
-        $("#reg:input").removeattr('disabled' );
+  
        },
 });
 });

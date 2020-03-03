@@ -6,7 +6,7 @@ use model\connection;
 class user extends connection{
   private $errorString;
   function checkUser($userName,$password,$conn){
-    $loginQuerry='select password,fname from User_Login where user_id ="'.$userName.'"';
+    $loginQuerry='select password,fname,email,phone_no from User_Login where user_id ="'.$userName.'"';
     // $conn->query($loginQuerry);
     $result = mysqli_query($conn, $loginQuerry);
     $row = mysqli_num_rows($result);
@@ -21,9 +21,11 @@ class user extends connection{
       if ($t == $row['password']){
         // $errorString = "correct";
         // session_start();
-        
+
         $_SESSION['user_id']=$userName;
         $_SESSION['fname']=$row['fname'];
+        $_SESSION['email']=$row['email'];
+        $_SESSION['phone_no']=$row['phone_no'];
         return;
         // header( "Location: index.php");
         // return $errorString;

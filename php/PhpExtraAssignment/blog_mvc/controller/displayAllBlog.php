@@ -21,14 +21,19 @@ use model\blog;
        <div class='bTitle'>
          <span class ='title'><?php echo $value['blog_title']; ?></span>
        </div>
-       <div class='bDate'>
-         <?php echo date('d/m/Y', $value['blog_date']); ?>
-      </div>
-      <div class='bAuther'>
-        <?php echo $value['blog_author']; ?>
-      </div>
+
+         <div class="style">
+         </div>
+
+         <div class='bAuther'>
+           <?php echo $value['blog_author']; ?>
+         </div>
+         <div class='bDate'>
+           <?php echo date('d/m/Y', $value['blog_date']); ?>
+        </div>
+
     </div>
-    <form class='form' action="/internship/php/PhpExtraAssignment/blog_mvc/controller/action.php" method="post">
+    <form class='form new' action="/internship/php/PhpExtraAssignment/blog_mvc/controller/action.php" method="post">
     <input type="hidden" name = "temp" value = "<?php echo $value['blog_id']; ?>">
     <input type="submit" name="readme" class ='botton' value="Read More"></form>
   </div>
@@ -37,3 +42,5 @@ use model\blog;
 ?>
 
 </div>
+</div>
+<?php require 'view/footer.php'; ?>

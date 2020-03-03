@@ -3,10 +3,10 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="/internship/php/PhpExtraAssignment/blog_mvc/view/index.css">
-    <link rel="stylesheet" href="/internship/php/PhpExtraAssignment/blog_mvc/view/login.css?v=1">
+    <link rel="stylesheet" href="/internship/php/PhpExtraAssignment/blog_mvc/view/index.css?v=5">
+    <link rel="stylesheet" href="/internship/php/PhpExtraAssignment/blog_mvc/view/login.css?v=3">
       <link href="https://fonts.googleapis.com/css?family=Mukta+Malar:200,400,700&display=swap" rel="stylesheet">
-      <script src="https://cdn.ckeditor.com/4.13.1/full-all/ckeditor.js?v=1"></script>
+      <script src="https://cdn.ckeditor.com/4.13.1/basic/ckeditor.js?v=1"></script>
     <title></title>
   </head>
   <body>
@@ -14,10 +14,10 @@
     require_once 'controller/navbarSession.php';
   ?>
   <div class="wrapper">
-  <div class="loginForm">
+  <div class="loginForm addblog">
   <form class="login" action="" method="post" enctype = "multipart/form-data">
 
-  <input type="text" name="bTitle" value="" placeholder="Blog Title" required>
+  <input type="text" name="bTitle" value="" placeholder="Blog Title" required autocomplete="off">
 
   <input type="file" name="bImage" value=""placeholder="Upload Image">
 

@@ -38,8 +38,6 @@ $obj = new blog();
               </div>
             </div>
           </div>
-    <?php }
-
-
-?>      </body>
+    <?php }?>
+        </body>
     </html>

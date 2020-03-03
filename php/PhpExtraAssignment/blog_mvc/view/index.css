@@ -28,7 +28,7 @@
   display: block;
 }
 
-.navbar a{
+ .navbar a ,.footer a{
   text-decoration: none;
   color: white;
   padding: 10px 10px;
@@ -39,13 +39,10 @@
   float: left;
   width: 100%;
 }
-.title {
-    font-size: 1.8em;
-    font-weight: 700;
-}
 
 
-.navbar a:hover{
+
+.navbar a:hover,.footer a:hover, .donate input[type=submit]:hover{
   background-color: orange;
   transition: 1s;
 }
@@ -55,7 +52,7 @@
 .content{
 width: 100%;
 float: left;
-margin: 100px auto;
+margin-top: 100px;
 }
 .blog{
   width: 30%;
@@ -69,12 +66,25 @@ margin: 100px auto;
   width: 100%;
   height: 200px;
 }
+
+.bTitle {
+  font-size: 1.4em;
+      font-weight: 700;
+      line-height: 27px;
+      opacity: 0.6;
+}
+
 .bImage{
 width: 200px;
 height: 200px;
 }
-.bTitle{
 
+.style{
+width: 70px;
+height: 3px;
+background: orange;
+margin-left: 25px;
+margin-top: 20px;
 }
 .left{
 /* margin: 5px 0; */
@@ -83,12 +93,27 @@ margin-top: 10px;
     width: 100%;
     height: 148px;
     overflow: hidden;
+    /* background: #fff7e6; */
 }
+
+.blog{
+    background:   #e6f2ff;
+}
+
+.new input[type=submit]{
+  background: #1271cd;
+  border: none;
+  border-radius: 50px;
+  width: 88px;
+  border-radius: 20px;
+}
+
 .bDate,.bAuther{
 font-size: 12px;
 font-weight:200;
 display: inline;
 }
+
 .botton{
   padding: 10px 15px;
   border-radius: 10px;
@@ -111,4 +136,45 @@ display: inline;
 .form{
   margin-bottom: 20px;
   margin-top: 20px;
+}
+
+.footer{
+  width: 100%;
+  background: black;
+  /* float: left; */
+  box-shadow:0px -2px 5px 0px grey;
+  text-align: center;
+  padding: 20px 0
+
+}
+.fcontent{
+  font-size: 1em;
+  color: white;
+  padding: 0px 15px;
+}
+
+ .donate input[type=submit]{
+   background: transparent;
+       border: none;
+       color: white;
+       font-size: 1.1em;
+       padding: 5px 5px;
+   }
+
+  .donate{
+    display: inline;
+  }
+
+.container::after,.footer::before{
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.addblog{
+  text-align: center;
+}
+
+.addblog form input[type=submit]{
+  margin: 20px 0px;
 }
