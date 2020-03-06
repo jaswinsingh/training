@@ -3,8 +3,8 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="/internship/php/PhpExtraAssignment/blog_mvc/view/index.css?v=5">
-    <link rel="stylesheet" href="/internship/php/PhpExtraAssignment/blog_mvc/view/login.css?v=3">
+    <link rel="stylesheet" href="/internship/php/PhpExtraAssignment/blog_mvc/view/index.css">
+    <link rel="stylesheet" href="/internship/php/PhpExtraAssignment/blog_mvc/view/login.css">
       <link href="https://fonts.googleapis.com/css?family=Mukta+Malar:200,400,700&display=swap" rel="stylesheet">
       <script src="https://cdn.ckeditor.com/4.13.1/basic/ckeditor.js?v=1"></script>
     <title></title>
@@ -29,5 +29,7 @@
 </script>
 </div>
 </div>
+
+<?php require 'view/footer.php'; ?>
   </body>
 </html>

@@ -1,17 +1,17 @@
 <?php
-// session_start();
 require 'controller/sessionCheck.php';
+if (!isset($_SESSION['EID']) && !isset($_SESSION['EID']) ){
+  header("Location:http://www.jaswinsingh.com/str/index");
+}
 require 'vendor/autoload.php';
 use model\blog;
 $post=[];
 $ob= new blog();
-$post=$ob->displayContent($_SESSION['BID']);
-
-
+$post=$ob->displayContent($_SESSION['EID']);
 
 if ( isset($_POST['upload']) && isset($_POST['bContent']) && isset($_POST['bTitle'])){
-  $title=$_POST['bTitle'];
-  $content=$_POST['bContent'];
+  $title = htmlspecialchars($_POST['bTitle']);
+  $content = strip_tags($_POST['bContent']);
   $file_store="";
 
   if(($_FILES['Image']['size']>0)){
@@ -28,12 +28,14 @@ if ( isset($_POST['upload']) && isset($_POST['bContent']) && isset($_POST['bTitl
 
 if ($ob->updateBlog($title,$content,$file_store,$_SESSION['BID'])){
   $msg = "Successfully updated";
-  $post=$ob->displayContent($_SESSION['BID']);?>
+  $post=$ob->displayContent($_SESSION['EID']);?>
   <script type="text/javascript">
   document.getElementById('test1').value = "<?php echo $post[0]['blog_title']; ?>";
   document.getElementById('test2').value = "<?php echo $post[0]['content']; ?>";
   </script>
 <?php
+// unset($_SESSION['BID']);
+unset($_SESSION['EID']);
 header( "Refresh:1; url='http://www.jaswinsingh.com/str/myblog'");
   }
 else {

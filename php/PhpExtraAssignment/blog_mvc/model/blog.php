@@ -9,7 +9,7 @@ class blog extends connection{
     $ob = new connection();
     $conn = $ob->openConnection();
     $post = [];
-    $displayData = "select blog_id,blog_title,blog_author,blog_date,img from blog_data where 1 = 1";
+    $displayData = "select blog_id,blog_title,blog_author,blog_date,img,content from blog_data where 1 = 1";
     if ($author){
       $displayData .= " AND blog_author ='$author'";
     }

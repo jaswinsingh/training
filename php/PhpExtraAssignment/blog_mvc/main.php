@@ -1,54 +1,54 @@
 <?php
-// require 'controller/login.php';
-// require 'controller/validateNewUser.php';
-// require 'controller/displayAllBlog.php';
-
-
 
 $url = parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH);
-$url=basename($url);
+// $url=basename($url);
 switch ($url) {
-  case 'login':
-     include './controller/login.php';
-    break;
 
-  case 'index':
+  case '/str':
     require 'controller/displayAllBlog.php';
     break;
 
-  case 'register':
+  case '/str/login':
+     include './controller/login.php';
+    break;
+
+  case '/str/index':
+    require 'controller/displayAllBlog.php';
+    break;
+
+  case '/str/register':
   require 'controller/validateNewUser.php';
     break;
 
-  case 'displayContent':
+  case '/str/displayContent':
     require 'controller/displayContent.php';
     break;
 
-  case 'myblog':
+  case '/str/myblog':
     require 'controller/myblog.php';
     break;
 
-    case 'editblog':
+    case '/str/editblog':
     require 'controller/editBlog.php';
     break;
 
-  case 'addblog':
+  case '/str/addblog':
     require 'controller/addBlog.php';
     break;
 
-  case 'delete':
+  case '/str/delete':
     require 'controller/delete.php';
     break;
 
-  case 'logout':
+  case '/str/logout':
     require 'controller/logout.php';
     break;
 
-    case 'razorpay':
+    case '/str/razorpay':
       require 'view/razorpay.php';
       break;
   default:
-
+      require 'view/404.php';
     break;
 }
 

@@ -6,8 +6,8 @@ $ob= new blog();
 
 require 'view/addBlog.php';
 if (isset($_POST['bContent']) && isset($_POST['bTitle']) && $_SERVER["REQUEST_METHOD"]=="POST") {
-  $blogtitle=$_POST['bTitle'];
-  $content = $_POST['bContent'];
+  $blogtitle = htmlspecialchars($_POST['bTitle']);
+  $content =  strip_tags($_POST['bContent']);
   $blogauthor = $_SESSION['fname'];
   $userId = $_SESSION['user_id'] ;
   $date=time();

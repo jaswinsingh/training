@@ -1,9 +1,15 @@
-<?php require 'controller/sessionCheck.php'; ?>
+<?php //require 'controller/sessionCheck.php';
+session_start();
+if ((!isset($_SESSION['yes'])) || (!isset($_SESSION['RID']))) {
+    header( "Location: http://www.jaswinsingh.com/str/index");
+}
+echo $_SESSION['RID'];
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="/internship/php/PhpExtraAssignment/blog_mvc/controller/displayBlog.css?v=1">
+    <link rel="stylesheet" href="/internship/php/PhpExtraAssignment/blog_mvc/controller/displayBlog.css?v=2">
     <link href="https://fonts.googleapis.com/css?family=Mukta+Malar:200,400,700&display=swap" rel="stylesheet">
     <title></title>
   </head>
@@ -15,7 +21,7 @@ use model\blog;
 $obj = new blog();
         // $_SESSION['BID']=$_POST['temp'];
         // echo $_SESSION['BID'];
-        $post=$obj->displayContent($_SESSION['BID']);
+        $post=$obj->displayContent($_SESSION['RID']);
         foreach ($post as $key => $value) { ?>
           <div class='container'>
             <div class='blog'>
@@ -38,6 +44,10 @@ $obj = new blog();
               </div>
             </div>
           </div>
-    <?php }?>
+    <?php }
+    // unset($_SESSION['BID']);
+    // unset($_SESSION['RID']);
+    // unset($_SESSION['yes']);
+    ?>
         </body>
     </html>

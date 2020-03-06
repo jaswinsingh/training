@@ -7,11 +7,11 @@ type: "POST",
 success:function(data){
   $("#user-availability-status").text(data);
   console.log(JSON.stringify(data));
-  if (JSON.stringify(data)=='"Username Available"'){
-      $("#user-availability-status").css({"color":"green"});
+  if (JSON.stringify(data)=='"AVAILABLE"'){
+      $("#user-availability-status").css({"color":"green","font-size":"0.8em"});
     }
     else {
-        $("#user-availability-status").css({"color":"red","font-weight":"100"});
+        $("#user-availability-status").css({"color":"red","font-size":"0.8em"});
     }
 },
 });
@@ -29,7 +29,7 @@ $("#error").text(data);
 error: function()
        {
            // enable button
-  
+
        },
 });
 });
@@ -54,6 +54,17 @@ success:function(data){
 $("#errorPhone").text(data);
 },
 });
+});
+
+
+$(".toggle-password").click(function() {
+  $(this).toggleClass("fa-eye fa-eye-slash");
+  var input = $($(this).attr("toggle"));
+  if (input.attr("type") == "password") {
+    input.attr("type", "text");
+  } else {
+    input.attr("type", "password");
+  }
 });
 
 });

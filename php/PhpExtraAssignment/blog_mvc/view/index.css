@@ -32,6 +32,8 @@
   text-decoration: none;
   color: white;
   padding: 10px 10px;
+  font-weight: 900;
+  opacity: 0.9;
 }
 
 
@@ -40,11 +42,9 @@
   width: 100%;
 }
 
-
-
 .navbar a:hover,.footer a:hover, .donate input[type=submit]:hover{
   background-color: orange;
-  transition: 1s;
+  transition: 0.8s;
 }
 .navbar a:active{
   background-color: blue;
@@ -56,22 +56,26 @@ margin-top: 100px;
 }
 .blog{
   width: 30%;
-    display: inline-block;
-    text-align: center;
-    margin: 20px 15px;
-    box-shadow: 2px 2px 5px #999;
+  display: inline-block;
+  /* text-align: center; */
+  margin: 20px 15px;
+  box-shadow: 2px 2px 5px #999;
+  background:   #e6f2ff;
 }
+
 
   img{
   width: 100%;
-  height: 200px;
+  height: 180px;
 }
 
 .bTitle {
   font-size: 1.4em;
       font-weight: 700;
-      line-height: 27px;
+      line-height: 25px;
       opacity: 0.6;
+      overflow: hidden;
+      height: 75px;
 }
 
 .bImage{
@@ -83,31 +87,35 @@ height: 200px;
 width: 70px;
 height: 3px;
 background: orange;
-margin-left: 25px;
+/* margin-left: 25px; */
 margin-top: 20px;
 }
 .left{
-/* margin: 5px 0; */
-margin-top: 10px;
+    margin-top: 10px;
     display: inline-block;
-    width: 100%;
-    height: 148px;
+    width: 87%;
+    height: 285px;
     overflow: hidden;
-    /* background: #fff7e6; */
+    padding: 0 20px;
 }
+.co{
+  height: 200px;
+}
+.addblog input{
+  width: 96%;
 
-.blog{
-    background:   #e6f2ff;
 }
 
 .new input[type=submit]{
-  background: #1271cd;
+  background: #4590ef;
+  color: white;
   border: none;
-  border-radius: 50px;
-  width: 88px;
-  border-radius: 20px;
+  width: 82px;
+  border-radius: 18px;
 }
-
+.new input[type=submit]:hover{
+  background: #2f68b1;
+}
 .bDate,.bAuther{
 font-size: 12px;
 font-weight:200;
@@ -115,12 +123,9 @@ display: inline;
 }
 
 .botton{
-  padding: 10px 15px;
-  border-radius: 10px;
+  padding: 11px 7px;
   outline: none;
-  border: 1px solid gold;
-  background-color: white;
-  margin: 0 4px;
+
 }
 .botton:hover{
   background-color: gold;
@@ -134,8 +139,9 @@ display: inline;
 }
 
 .form{
-  margin-bottom: 20px;
-  margin-top: 20px;
+  /* margin-bottom: 20px; */
+  /* margin-top: 20px; */
+
 }
 
 .footer{
@@ -171,10 +177,41 @@ display: inline;
   display: block;
 }
 
-.addblog{
-  text-align: center;
-}
+
+.donate input[type=submit]{
+  background: transparent;
+      border: none;
+      color: white;
+      font-size: 1.1em;
+      padding: 5px 5px;
+      box-shadow: none;
+      margin: 0;
+  }
 
 .addblog form input[type=submit]{
   margin: 20px 0px;
 }
+.con p{
+
+line-height: 1.3;
+
+font-weight: 100;
+opacity: 0.5;
+}
+.con{
+  margin-top: 10px;
+  overflow: hidden;
+  height: 60px;
+}
+.updateMsg{
+    width: 100%;
+    margin-top: 18px;
+    text-align: center;
+    background-color: #C6FF95;
+    padding: 16px 0px;
+}
+
+
+/* .required{
+  color: red;
+} */
